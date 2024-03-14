@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
+function InputForm({ length, setLength, width, setWidth, depth, setDepth, bagSize, bagPrice }) {
     const handleSubmit = (event) => {
       event.preventDefault();
-      console.log(`Length: ${length}, Width: ${width}, Depth: ${depth}`);
+      console.log(`Length: ${length}, Width: ${width}, Depth: ${depth}, Bag Size: ${bagSize}, Bag Price ${bagPrice}`);
     };
   
     return (
       <>
-        <h2>Input</h2>
+        <h2>Area To Cover with Mulch</h2>
         <form className='formStyle' onSubmit={handleSubmit}>
           <label htmlFor="lengthInput">Length in Feet
             <input
@@ -47,7 +47,7 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
             />
           </label>
           <br></br>
-          <input type="submit" value="Calculate!" />
+          <input type="submit" value="Calculate Mulch Needs" />
         </form>
       </>
     );
@@ -60,6 +60,8 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
     setWidth: PropTypes.func.isRequired,
     depth: PropTypes.number.isRequired,
     setDepth: PropTypes.func.isRequired,
+    bagSize: PropTypes.number.isRequired,
+    bagPrice: PropTypes.number.isRequired
   };
   
   export default InputForm;
