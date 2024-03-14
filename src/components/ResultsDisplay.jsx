@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 function ResultsDisplay({ length, width, depth, bagSize, bagPrice, result }) {
     return (
         <div>
+            <h2>Results</h2>
             <p>Thank you for using our calculator. </p>
             <p>You said your space is {length} feet long, {width} feet wide, and {depth} inches deep. </p>
             <p>The volume of that space is {result.volume} cubic yards. </p>

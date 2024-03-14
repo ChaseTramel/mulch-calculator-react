@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function EditForm({ bagSize, setBagSize, bagPrice, setBagPrice, setShowEditForm }) {
+function EditForm({ bagSize, setBagSize, bagPrice, setBagPrice, setShowEditForm, setShowResults }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     setShowEditForm(false);

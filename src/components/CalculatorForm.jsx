@@ -19,15 +19,19 @@ function CalculatorForm({ length, setLength, width, setWidth, depth, setDepth, b
         bagPrice={bagPrice}
         setShowResults={setShowResults}
       />
-      <a href="#" id="editLink" onClick={() => setShowEditForm(prevState => !prevState)}>
+      <a href="#" id="editLink" onClick={() => {
+        setShowEditForm(prevState => !prevState);
+        setShowResults(false);
+      }}>
         Click here to edit Mulch Details.
-        </a>
+      </a>
       {showEditForm && < EditForm 
         bagSize={bagSize} 
         setBagSize={setBagSize} 
         bagPrice={bagPrice} 
         setBagPrice={setBagPrice} 
         setShowEditForm={setShowEditForm}
+        setShowResults={setShowResults}
       />}
     </div>
   );

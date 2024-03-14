@@ -19,7 +19,10 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth, bagSiz
               min="0"
               step="1"
               value={length}
-              onChange={(e) => setLength(parseFloat(e.target.value))}
+              onChange={(e) => {
+                setLength(parseFloat(e.target.value));
+                setShowResults(false);
+              }}
             /> 
           </label>
           <br></br>
@@ -31,7 +34,10 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth, bagSiz
               min="0"
               step="1"
               value={width}
-              onChange={(e) => setWidth(parseFloat(e.target.value))}
+              onChange={(e) => {
+                setWidth(parseFloat(e.target.value));
+                setShowResults(false);
+              }}
             />
           </label>
           <br></br>
@@ -43,7 +49,10 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth, bagSiz
               min="0"
               step="0.25"
               value={depth}
-              onChange={(e) => setDepth(parseFloat(e.target.value))}
+              onChange={(e) => {
+                setDepth(parseFloat(e.target.value));
+                setShowResults(false);
+              }}
             />
           </label>
           <br></br>

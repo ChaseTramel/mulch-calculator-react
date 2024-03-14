@@ -32,6 +32,7 @@ function App() {
         setBagPrice={setBagPrice}
         setShowResults={setShowResults}
       />
+      <br></br>
       {showResults && <ResultsDisplay 
         result={result} 
         length={length} 
