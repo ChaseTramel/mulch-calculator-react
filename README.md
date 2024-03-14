@@ -5,4 +5,4 @@ This project is a web app built in React that takes in user input about an idea 
 
 The mulch bag information can be optionally edited.
 
-The project incorporats form components, demonstrating the use of controlled components in React. The `ResultsDisplay` component also demonstrates appropriate use of passing props, as well as using states to conditionally display information. The calculation logic is handled in a custom hook, `useCalculateMulch`.
+The project incorporates form components, demonstrating the use of controlled components in React. The `ResultsDisplay` component also demonstrates appropriate use of passing props, as well as using states to conditionally display information. The calculation logic is handled in a custom hook, `useCalculateMulch`.
