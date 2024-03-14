@@ -1,8 +1,13 @@
-function EditForm({ bagSize, setBagSize, bagPrice, setBagPrice }) {
+function EditForm({ bagSize, setBagSize, bagPrice, setBagPrice, setShowEditForm }) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setShowEditForm(false);
+  };
+  
   return (
     <>
       <h2>Edit Mulch Details</h2>
-      <form className='formStyle'>
+      <form className='formStyle' onSubmit={handleSubmit}>
         <label htmlFor="bagSize">Bag Size in Cubic Yards
           <input
             type="number"

@@ -32,6 +32,7 @@ function CalculatorForm() {
         setBagSize={setBagSize} 
         bagPrice={bagPrice} 
         setBagPrice={setBagPrice} 
+        setShowEditForm={setShowEditForm}
       />}
     </div>
   );
