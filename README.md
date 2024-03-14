@@ -1,5 +1,5 @@
 # Mulch Calculator in React
-This was inspired as a learning project, after I built the same project in vanilal JS, which can be seen [here](https://github.com/ChaseTramel/mulch-calculator-js).
+This was inspired as a learning project, after I built the same project in vanilla JS, which can be seen [here](https://github.com/ChaseTramel/mulch-calculator-js).
 
 This project is a web app built in React that takes in user input about an idea to be covered with mulch, and displays information about that area, including how many bags of mulch will be needed.
 
