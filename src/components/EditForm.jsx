@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function EditForm({ bagSize, setBagSize, bagPrice, setBagPrice, setShowEditForm }) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -35,5 +37,13 @@ function EditForm({ bagSize, setBagSize, bagPrice, setBagPrice, setShowEditForm 
     </>
   );
 }
+
+EditForm.propTypes = {
+  bagSize: PropTypes.number.isRequired,
+  setBagSize: PropTypes.func.isRequired,
+  bagPrice: PropTypes.number.isRequired,
+  setBagPrice: PropTypes.func.isRequired,
+  setShowEditForm: PropTypes.func.isRequired
+};
 
 export default EditForm;
