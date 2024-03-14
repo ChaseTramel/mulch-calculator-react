@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
     const handleSubmit = (event) => {
@@ -12,6 +13,7 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
             id="lengthInput"
             name="length"
             type="number"
+            min="0"
             value={length}
             onChange={(e) => setLength(parseFloat(e.target.value))}
           /> 
@@ -22,6 +24,7 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
             id="widthInput"
             name="width"
             type="number"
+            min="0"
             value={width}
             onChange={(e) => setWidth(parseFloat(e.target.value))}
           />
@@ -32,6 +35,7 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
             id="depthInput"
             name="depth"
             type="number"
+            min="0"
             value={depth}
             onChange={(e) => setDepth(parseFloat(e.target.value))}
           />
@@ -41,5 +45,14 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
       </form>
     );
   }
+
+  InputForm.propTypes = {
+    length: PropTypes.number.isRequired,
+    setLength: PropTypes.func.isRequired,
+    width: PropTypes.number.isRequired,
+    setWidth: PropTypes.func.isRequired,
+    depth: PropTypes.number.isRequired,
+    setDepth: PropTypes.func.isRequired,
+  };
   
   export default InputForm;
