@@ -1,7 +1,7 @@
 import React from 'react';
 import CalculatorForm from './components/CalculatorForm';
 import ResultsDisplay from './components/ResultsDisplay';
-import useCalculateMulch from './hooks/useCalculateMulch';
+import './App.css';
 
 function App() {
 

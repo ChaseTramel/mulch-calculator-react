@@ -6,7 +6,7 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
     };
   
     return (
-      <form onSubmit={handleSubmit}>
+      <form className='formStyle' onSubmit={handleSubmit}>
         <label>Length in Feet</label>
         <br></br>
         <input
@@ -31,7 +31,7 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
           onChange={(e) => setDepth(parseFloat(e.target.value))}
         />
         <br></br>
-        <button type="submit">Calculate!</button>
+        <input type="button" value="Calculate!" />
       </form>
     );
   }
