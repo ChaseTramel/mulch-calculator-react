@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
     const handleSubmit = (event) => {
       event.preventDefault();
+      console.log(`Length: ${length}, Width: ${width}, Depth: ${depth}`);
     };
   
     return (
@@ -14,6 +15,7 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
             name="length"
             type="number"
             min="0"
+            step="0.5"
             value={length}
             onChange={(e) => setLength(parseFloat(e.target.value))}
           /> 
@@ -25,6 +27,7 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
             name="width"
             type="number"
             min="0"
+            step="0.5"
             value={width}
             onChange={(e) => setWidth(parseFloat(e.target.value))}
           />
@@ -36,12 +39,13 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
             name="depth"
             type="number"
             min="0"
+            step="0.25"
             value={depth}
             onChange={(e) => setDepth(parseFloat(e.target.value))}
           />
         </label>
         <br></br>
-        <input type="button" value="Calculate!" />
+        <input type="submit" value="Calculate!" />
       </form>
     );
   }

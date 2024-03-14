@@ -38,7 +38,7 @@ form {
         border: 5px solid #a7a7a7;
     }
     
-    input[type=button] {
+    input[type=submit] {
         background-color: #4b9fe3;
         border: none;
         border-radius: 12px;
@@ -52,12 +52,12 @@ form {
         transition-duration: 0.4s;
     }
     
-    input[type=button]:hover {
+    input[type=submit]:hover {
         background-color: rgb(0, 191, 255);
         color: white;
     }
     
-    input[type=button]:disabled {
+    input[type=submit]:disabled {
         opacity: 0.4;
         cursor: not-allowed;
     }
