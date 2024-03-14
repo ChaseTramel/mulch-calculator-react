@@ -8,45 +8,48 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth }) {
     };
   
     return (
-      <form className='formStyle' onSubmit={handleSubmit}>
-        <label htmlFor="lengthInput">Length in Feet
-          <input
-            id="lengthInput"
-            name="length"
-            type="number"
-            min="0"
-            step="0.5"
-            value={length}
-            onChange={(e) => setLength(parseFloat(e.target.value))}
-          /> 
-        </label>
-        <br></br>
-        <label htmlFor="widthInput">Width in Feet
-          <input
-            id="widthInput"
-            name="width"
-            type="number"
-            min="0"
-            step="0.5"
-            value={width}
-            onChange={(e) => setWidth(parseFloat(e.target.value))}
-          />
-        </label>
-        <br></br>
-        <label htmlFor="depthInput">Depth in Inches
-          <input
-            id="depthInput"
-            name="depth"
-            type="number"
-            min="0"
-            step="0.25"
-            value={depth}
-            onChange={(e) => setDepth(parseFloat(e.target.value))}
-          />
-        </label>
-        <br></br>
-        <input type="submit" value="Calculate!" />
-      </form>
+      <>
+        <h2>Input</h2>
+        <form className='formStyle' onSubmit={handleSubmit}>
+          <label htmlFor="lengthInput">Length in Feet
+            <input
+              id="lengthInput"
+              name="length"
+              type="number"
+              min="0"
+              step="1"
+              value={length}
+              onChange={(e) => setLength(parseFloat(e.target.value))}
+            /> 
+          </label>
+          <br></br>
+          <label htmlFor="widthInput">Width in Feet
+            <input
+              id="widthInput"
+              name="width"
+              type="number"
+              min="0"
+              step="1"
+              value={width}
+              onChange={(e) => setWidth(parseFloat(e.target.value))}
+            />
+          </label>
+          <br></br>
+          <label htmlFor="depthInput">Depth in Inches
+            <input
+              id="depthInput"
+              name="depth"
+              type="number"
+              min="0"
+              step="0.25"
+              value={depth}
+              onChange={(e) => setDepth(parseFloat(e.target.value))}
+            />
+          </label>
+          <br></br>
+          <input type="submit" value="Calculate!" />
+        </form>
+      </>
     );
   }
 
