@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-function InputForm({ length, setLength, width, setWidth, depth, setDepth, bagSize, bagPrice }) {
+function InputForm({ length, setLength, width, setWidth, depth, setDepth, bagSize, bagPrice, setShowResults }) {
     const handleSubmit = (event) => {
       event.preventDefault();
+      setShowResults(true);
       console.log(`Length: ${length}, Width: ${width}, Depth: ${depth}, Bag Size: ${bagSize}, Bag Price ${bagPrice}`);
     };
   
@@ -61,7 +61,8 @@ function InputForm({ length, setLength, width, setWidth, depth, setDepth, bagSiz
     depth: PropTypes.number.isRequired,
     setDepth: PropTypes.func.isRequired,
     bagSize: PropTypes.number.isRequired,
-    bagPrice: PropTypes.number.isRequired
+    bagPrice: PropTypes.number.isRequired,
+    setShowResults: PropTypes.func.isRequired
   };
   
   export default InputForm;

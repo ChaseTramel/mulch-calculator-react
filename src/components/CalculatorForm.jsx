@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import InputForm from './InputForm';
 import EditForm from './EditForm';
+import PropTypes from 'prop-types';
 
-function CalculatorForm() {
-  const [length, setLength] = useState(0);
-  const [width, setWidth] = useState(0);
-  const [depth, setDepth] = useState(0);
-
-  const [bagSize, setBagSize] = useState(0.5); 
-  const [bagPrice, setBagPrice] = useState(10.99); 
-  
+function CalculatorForm({ length, setLength, width, setWidth, depth, setDepth, bagSize, setBagSize, bagPrice, setBagPrice, setShowResults}) {
   const [showEditForm, setShowEditForm] = useState(false);
 
   return (
@@ -23,6 +17,7 @@ function CalculatorForm() {
         setDepth={setDepth}
         bagSize={bagSize} 
         bagPrice={bagPrice}
+        setShowResults={setShowResults}
       />
       <a href="#" id="editLink" onClick={() => setShowEditForm(prevState => !prevState)}>
         Click here to edit Mulch Details.
@@ -37,5 +32,20 @@ function CalculatorForm() {
     </div>
   );
 }
+
+CalculatorForm.propTypes = {
+  length: PropTypes.number.isRequired,
+  setLength: PropTypes.func.isRequired,
+  width: PropTypes.number.isRequired,
+  setWidth: PropTypes.func.isRequired,
+  depth: PropTypes.number.isRequired,
+  setDepth: PropTypes.func.isRequired,
+  bagSize: PropTypes.number.isRequired,
+  setBagSize: PropTypes.func.isRequired,
+  bagPrice: PropTypes.number.isRequired,
+  setBagPrice: PropTypes.func.isRequired,
+  setShowResults: PropTypes.func.isRequired
+};
+
 
 export default CalculatorForm;
